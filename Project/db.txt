@@ -1,0 +1,61 @@
+CREATE DATABASE business;
+
+CREATE TABLE admin (
+  id Int(4) PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(20),
+  password VARCHAR(20)
+  );
+
+INSERT INTO `business`.`admin` (`id`, `username`, `password`) VALUES (NULL, 'admin', 'admin');
+
+CREATE TABLE employee (
+  FirstName VARCHAR(20) ,
+  LastName VARCHAR(20),
+  SurName VARCHAR(25),
+  bday DATE,
+  gender VARCHAR(12),
+  country VARCHAR(20),
+  state VARCHAR(20),
+  district VARCHAR(30),
+  address VARCHAR(25),
+  username VARCHAR(30) PRIMARY KEY,
+  phone VARCHAR(20),
+  password VARCHAR(20),
+  pan VARCHAR(20),
+  assigned_or_not VARCHAR(20)
+);
+
+CREATE TABLE documents (
+  id Int(4) PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100),
+  description VARCHAR(100),
+  path VARCHAR(100),
+  role VARCHAR(20)
+  );
+
+CREATE TABLE project (
+  prj_name VARCHAR(20) PRIMARY KEY,
+  prj_desc VARCHAR(20),
+  prj_manager VARCHAR(25),
+  prj_duration VARCHAR(12)
+ );
+
+CREATE TABLE project_manager (
+  FirstName VARCHAR(20) ,
+  LastName VARCHAR(20),
+  SurName VARCHAR(25),
+  bday DATE,
+  gender VARCHAR(12),
+  country VARCHAR(20),
+  state VARCHAR(20),
+  district VARCHAR(30),
+  address VARCHAR(25),
+  username VARCHAR(30) PRIMARY KEY,
+  phone VARCHAR(20),
+  password VARCHAR(20),
+  pan VARCHAR(20),
+  prj_name VARCHAR(20),
+  assigned_or_not VARCHAR(20)
+);
+
+
